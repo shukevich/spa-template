@@ -1,0 +1,22 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "pack": "gulp pack",
+    "start-prod": "gulp pack && PORT=3001 node app.js",
+    "html-lint": "gulp html-lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.15.3"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-htmlhint": "0.3.1",
+    "gulp-minifier": "0.2.2"
+  }
+}
