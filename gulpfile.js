@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     minify = require('gulp-minifier'),
-    htmlhint = require("gulp-htmlhint");
+    htmlhint = require("gulp-htmlhint"),
+    browserSync = require('browser-sync');
 
 gulp.task('pack', function() {
   return gulp.src('www/src/**/*')
@@ -18,4 +19,11 @@ gulp.task('html-lint', function() {
   return gulp.src('www/src/*.html')
     .pipe(htmlhint())
     .pipe(htmlhint.failReporter());
+});
+
+gulp.task('watch', function () {
+  browserSync({
+    proxy: 'localhost:3000',
+    files: ['www/**/*.{js,css,html}']
+  });
 });
