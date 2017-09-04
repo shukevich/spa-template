@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "concurrently 'node app.js' 'gulp watch'",
+    "start": "concurrently \"node app.js\" \"gulp watch\"",
     "pack": "gulp pack",
     "start-prod": "gulp pack && PORT=3001 node app.js",
     "html-lint": "gulp html-lint || true"
