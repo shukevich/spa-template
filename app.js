@@ -4,7 +4,14 @@ var express = require('express'),
   port = isProd ? process.env.PORT : 3000,
   rootFolder = `${__dirname}/www/${isProd ? 'release' : 'src'}`;
 
+app.set('view engine', 'ejs');
+app.set('views', './www/src/views');
+
 app.use(express.static(rootFolder));
+
+app.get('/form', function(req, res){
+  res.render('form', { query: req.query });
+});
 
 app.get('/', function(req, res){
   res.sendFile(`${rootFolder}/Index.html`);
