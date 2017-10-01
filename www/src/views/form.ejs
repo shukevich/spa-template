@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Form</title>
+  <title>Form test</title>
 </head>
 <body>
 
-  <% if (query.submitted) { %>
+  <% if (typeof(query) !== 'undefined' && query.submitted) { %>
     <h1>The server had accepted:</h1>
     <p>radio: <%= query['radio'] %></p>
     <p>Try again? <a href="/form">Yes!</a></p>
   <% } %>
 
-  <% if (!query.submitted) { %>
+  <% if (typeof(query) === 'undefined' || !query.submitted) { %>
   
   <h1>Play with the HTML form</h1>
   <form action="/form">
