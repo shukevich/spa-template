@@ -1,3 +1,3 @@
 # spa-template
 
-Simple SPA application template based on jQuery, Bootstrap, Express, Gulp, Browsersync, D3.
+Simple SPA application template based on jQuery, Bootstrap, Express, Gulp, Browsersync, D3...
